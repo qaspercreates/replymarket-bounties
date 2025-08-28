@@ -1,5 +1,5 @@
 name: New Bounty
-description: Post a bounty for a viral reply (winner paid by buyer)
+description: Post a bounty for a viral reply (winner paid by buyer). No subscriptions. 10% platform fee.
 title: "[£PRIZE] Short brief"
 labels: ["bounty"]
 body:
@@ -8,6 +8,13 @@ body:
     attributes:
       label: Tweet URL
       placeholder: "https://x.com/yourpost"
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options: ["Pop Culture","Sports","Music","Tech","Brand","Other"]
     validations:
       required: true
   - type: input
