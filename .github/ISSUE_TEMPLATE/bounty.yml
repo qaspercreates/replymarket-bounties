@@ -1,0 +1,54 @@
+name: New Bounty
+description: Post a bounty for a viral reply (winner paid by buyer)
+title: "[£PRIZE] Short brief"
+labels: ["bounty"]
+body:
+  - type: input
+    id: tweet_url
+    attributes:
+      label: Tweet URL
+      placeholder: https://x.com/yourpost
+    validations:
+      required: true
+  - type: input
+    id: prize
+    attributes:
+      label: Prize amount (e.g., £100 or $100)
+      placeholder: 100
+    validations:
+      required: true
+  - type: dropdown
+    id: deadline
+    attributes:
+      label: Deadline
+      options: ["15 minutes","30 minutes","60 minutes","24 hours"]
+    validations:
+      required: true
+  - type: textarea
+    id: brief
+    attributes:
+      label: Brief
+      placeholder: Tone, do/don’t, context
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Buyer contact (email or @handle)
+      placeholder: name@example.com
+    validations:
+      required: true
+  - type: input
+    id: payment_link
+    attributes:
+      label: Payment link (optional)
+      placeholder: https://paypal.me/you/100
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Rules
+      options:
+        - label: No harassment, doxxing, hate, or illegal content
+          required: true
+        - label: I confirm I can legally post and pay this bounty
+          required: true
